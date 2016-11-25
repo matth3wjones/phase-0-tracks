@@ -4,7 +4,11 @@
 
 * What is version control?  Why is it useful?
 
+<<<<<<< HEAD
 Version Control is a system that manages changes to a given document, code or project, saving multiple versions.  It allows multiple versions of a project to coexist while they are in development and to merge revisions made by different people.  Version Control is used in coding to ensure the master remains secure, and that updates and additions are safe before implementation to the master.
+=======
+Version Control is a system that manages changes to a given document, code or project, saving multiple versions.  It allows multiple versions of a project to coexist while they are in development.  Version Control is used in coding to ensure the master remains secure, and that updates and additions are safe before implementation to the master.
+>>>>>>> new-feature
 
 * What is a branch and why would you use one?
 
@@ -17,5 +21,8 @@ A commit is a way of making a set of changes permanent.  Good commit message is 
 * What is a merge conflict?
 
 A merge conflict occurs when the two versions of code are not compatible with one another.
+<<<<<<< HEAD
 
 :)
+=======
+>>>>>>> new-feature
