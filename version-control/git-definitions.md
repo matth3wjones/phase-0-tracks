@@ -17,3 +17,5 @@ A commit is a way of making a set of changes permanent.  Good commit message is 
 * What is a merge conflict?
 
 A merge conflict occurs when the two versions of code are not compatible with one another.
+
+:)
