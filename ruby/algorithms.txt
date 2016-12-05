@@ -1,0 +1,35 @@
+Identify current floor
+Determine if destination floor is higher or lower than current floor
+  Destination - Current = Up or Down
+    If sum of the above is negative, press down button
+    If sum of the above is positive, press the up button
+Until door opens, wait
+Once door opens, enter elevator
+  Ensure robot is entirely in elevator and doors close
+Press button of destination floor
+When elevator door opens, Review floor number outside elevator
+  If destination floor, exit
+  If not destination floor, wait
+
+---Walk the dogs---
+Identify if dogs need to go out, if yes to any of the following, proceed
+  Has it been more than 6 hours since last walk?
+  Have dogs been provided water within last hour?
+  Have dogs been given food within the last hour?
+  Are dogs restless?
+Grab coat
+Put on shoes
+Attach leashes
+Exit door
+turn right
+turn left
+Enter stairwell and proceed to ground floor
+Turn right and exit building
+Proceed to end of block and turn right, repeat 3 times
+Re-enter at front door
+Enter lobby
+  Call Elevator Code here
+Turn left, 2x
+Turn right
+Enter home
+Remove leashes, coat and shoes
