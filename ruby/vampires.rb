@@ -18,15 +18,16 @@ fullName = firstName + " " + lastName
 
 puts "Results for #{[firstName, lastName].compact.join(' ')}:"
 #Comparison of the Applicant's claimed age versus their estimated age
-puts "Estimated Age: #{estimatedAge}"
-puts "Claimed Age: #{applicantAge}"
+#puts "Estimated Age: #{estimatedAge}"
+#puts "Claimed Age: #{applicantAge}"
+
 #Formula checks if the Applicant supplied the correct age, accounting for if applicant's birthday has not happened.
 if estimatedAge.to_i == applicantAge.to_i || (estimatedAge.to_i - 1) == applicantAge.to_i
   finalAge = true
 else
   finalAge = false
 end
-
+#Formula to Review aswers
 if fullName == "Drake Cula" || fullName == "Tu Fang"
   puts "Definitely a vampire"
 elsif finalAge == false && (garlicReply == "n" && insuranceReply == "n")
