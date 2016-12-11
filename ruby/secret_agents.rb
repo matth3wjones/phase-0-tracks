@@ -13,7 +13,7 @@ def encrypt(userPassword)
       #places the 'a' in the array
     else
       encryptedArray << userPassword[index].next
-      #places the next letter in the alphabet (for a given character( in array
+      #places the next letter in the alphabet (for a given character) in array
     end
     #ends 'if' loop
     index += 1
@@ -62,9 +62,13 @@ puts "Would you like to encrypt or decrypt?"
 #asks user which method to call
 selectedAction = gets.chomp.downcase
 #collects user input
-if selectedAction != ("encrypt" || "decrypt")
+if selectedAction == "encrypt"
+  #do nothing
+elsif selectedAction == "decrypt"
+  #do nothing
+else
   #condition to correct bad user entry
-  puts "Enter just 'encrypt' or 'decrypt'"
+  puts "Please enter just 'encrypt' or 'decrypt'"
   #informs user of error, and re-asks user which method to call
   selectedAction = gets.chomp.downcase
   #collects user input
