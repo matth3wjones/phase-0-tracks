@@ -95,5 +95,5 @@ puts "Again here are the winning Mega Million numbers over 5 #{mega_million}"
 
 #method remove items until condition is false, then stops - hash
 #
-mega_million.keep_if{|x,y| x == nil}
-puts "test #{mega_million}"
+mega_million.keep_if{|date,mega_num| mega_num.even?}
+puts "And now just the even Mega Million winners: #{mega_million}"
