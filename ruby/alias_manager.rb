@@ -18,12 +18,17 @@
 
 puts "What is your first name?"
 #request for users first name
-first_name = gets.chomp
-#receive user input
+first_name = gets.chomp.chars
+#save user input, separate first name by letter
 puts "What is your last name?"
 #request for users last name
+last_name = gets.chomp.chars
+#save user input, separate last name by letter
 
-
+p first_name
+#test
+p last_name
+#test
 
 #
 #
@@ -37,32 +42,31 @@ vowels = ["a", "e", "i", "o" "u"]
 consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
 #array of consonants
 
-def swap_names(actual)
-  #method to swap names
-  actual.split(' ')
-  #separate first and last names
-  p actual
-  #test of above
 
-end
-#end name swap method
-
-
-def vowel_or_consonant(x)
+def vowel_or_consonant(name_array)
   #method to check for letter type
   index = 0
   #loop index
-  while index < spy_name.length
+  vowels = ["a", "e", "i", "o" "u"]
+  #vowel array
+  consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
+  #consonant array
+  while index < name_array.length
     #loop thru each character
-
+    if vowels.select! { || }
+      #check if vowel
+      puts name_array[index]
+      #test
+    end
+    #ends if loop
+    index += 1
+    #loop counter
   end
   #ends while loop
-  index += 1
-  #loop counter
 end
 #end vowel or not method
 
 
 
-
-swap_names(real_name)
+puts vowel_or_consonant(first_name)
+puts vowel_or_consonant(last_name)
