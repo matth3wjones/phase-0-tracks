@@ -41,6 +41,9 @@ class Puppy
   end
   #ends dog years method
 
+  def initialize
+    puts "Initializing new puppy instance ..."
+  end
 
 end
 #end class
