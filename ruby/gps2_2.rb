@@ -12,18 +12,15 @@
 
 def grocery_list(items)
   #method for create list
-  grocery_array = items.split(" ")
+  array = items.split(" ")
   #separate by spaces TEST
   #p grocery_array
   #test print
-  grocery_hash = {}
+  hash = {}
   #empty hash
-  grocery_array.each do |item|
-    #iterate over each item and add to hash
-    grocery_hash[item] = 1
-  end
+  array.each {|item| hash[item] = 1}
   #ends hash
-  grocery_hash
+  hash
   #test hash
 end
 #end list method
@@ -37,9 +34,9 @@ our_list = grocery_list("apple carrot pizza cereal")
 # steps: add a new item, and a quantity to our hash
 # output: original HASH plus items
 
-def add_to_list(list, new_item, quantity)
+def add_to_list(list, item, quantity)
   #method to add items
-  list[new_item] = quantity
+  list[item] = quantity
 end
 #ends add method
 
@@ -57,15 +54,14 @@ add_to_list(our_list, "cheese", 2)
 # if match, remove it
 # output: original hash with a item removed
 
-def remove_an_item(list, not_needed_item)
+def remove_an_item(list, item)
   #method to remove item
-  list.delete(not_needed_item)
+  list.delete(item)
 end
 #ends remove method
 
 remove_an_item(our_list, "carrot")
 #code to test remove
-
 #p our_list
 
 # Method to update the quantity of an item
@@ -121,14 +117,25 @@ print_grocery_list(new_list)
 
 #
 #
+#REFLECT
 #
+#What did you learn about pseudocode from working on this challenge?
+# => I learned how detailed pseduocoding should be, creating well thought out pseudocoding case make the coding process much easier, but requires more forethought.  This forethought is also a troubleshooting opportunity to fix any potential issues with logic and not the syntax
+
+#What are the tradeoffs of using arrays and hashes for this challenge?
+# => Arrays cannot include a value, while using a hash allows you to call an item by key and not index.
+
+#What does a method return?
+# => A method returns a value by default, it will provide the value of the last line executed
 #
+#What kind of things can you pass into methods as arguments?
+# => Objects, strings, keys, integers, blocks
 #
+#How can you pass information between methods?
+# =>using the inherent output, one can pass information back and forth using using parameters in their methods.
 #
-#
-#
-#
-#
+#What concepts were solidified in this challenge, and what concepts are still confusing?
+# =>Pseudocoding is something I feel more solidified in and yet more confused with; as I am still learning how to do this activity, pseudocoding is difficult.
 #
 #
 #
