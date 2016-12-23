@@ -5,6 +5,8 @@
 
 class Santa
   #santa class
+  attr_reader :name, :gender, :age, :ethnicity, :reindeer_ranking
+  attr_accessor :name, :gender
 
   def initialize(name, gender, ethnicity)
     #identifies new instance being intialized
@@ -24,35 +26,11 @@ class Santa
   end
   #ends initialize method
 
-  def name
-    #name getter method
-    @name
-  end
-  #ends name getter method
-
-  def name=(new_name)
-    #name setter method
-    @name = new_name
-  end
-  #ends name setter method
-
-  def celebrate_birthday
-    #age getter method
-    @age
-  end
-  #ends age getter method
-
   def celebrate_birthday=(num)
     #celebrate_birthday setter method
     @age += num
   end
   #ends celebrate_birthday setter method
-
-  def get_mad_at
-    #get_mad_at getter method
-    @reindeer_ranking
-  end
-  #ends get_mad_at getter method
 
   def get_mad_at=(reindeer_name)
     #get_mad_at setter method
@@ -62,30 +40,6 @@ class Santa
     #delete the item from the array while re-adding at end of array
   end
   #ends get_mad_at setter method
-
-  def gender
-    #gender getter method
-    @gender
-  end
-  #ends gender getter method
-
-  def gender=(new_gender)
-    #gender setter method
-    @gender = new_gender
-  end
-  #ends gender setter method
-
-  def age
-    #age getter method
-    @age
-  end
-  #ends age getter method
-
-  def ethnicity
-    #ethnicity getter method
-    @ethnicity
-  end
-  #neds ethnicity getter method
 
   def speak
     #speak method
@@ -111,13 +65,13 @@ puts "#{santa.name}"
 #getter test
 santa.celebrate_birthday=(1)
 #setter test
-puts "#{santa.name} is #{santa.celebrate_birthday}"
+puts "#{santa.name} is #{santa.age}"
 #getter test
 santa.celebrate_birthday=(1)
-puts "#{santa.name} is #{santa.celebrate_birthday}"
+puts "#{santa.name} is #{santa.age}"
 #getter/setter test 2
 santa.celebrate_birthday=(1)
-puts "#{santa.name} is #{santa.celebrate_birthday}"
+puts "#{santa.name} is #{santa.age}"
 #getter/setter test 3
 santa.gender=("other")
 #setter test
@@ -125,7 +79,7 @@ puts "#{santa.name} has a gender of #{santa.gender}"
 #setter test
 santa.get_mad_at=("Vixen")
 #setter test
-puts "Santa's Reindeer Ranking #{santa.get_mad_at}"
+puts "Santa's Reindeer Ranking #{santa.reindeer_ranking}"
 #getter test
 
 santas = []
