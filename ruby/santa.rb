@@ -6,9 +6,9 @@
 class Santa
   #santa class
   attr_reader :name, :gender, :age, :ethnicity, :reindeer_ranking
-  attr_accessor :name, :gender
+  attr_accessor :name, :gender, :age
 
-  def initialize(name, gender, ethnicity)
+  def initialize(name, gender, ethnicity, age)
     #identifies new instance being intialized
     puts "Initializing Santa instance #{name}..."
     #shows in Terminal new initialization
@@ -22,7 +22,7 @@ class Santa
     #static ranking of reindeer
     @age = 0
     #static age of zero
-    puts "#{name} has a gender of #{gender} and ethnicity of #{ethnicity}"
+    puts "#{name} has a gender of #{gender} and ethnicity of #{ethnicity} and is #{age} years old"
   end
   #ends initialize method
 
@@ -56,7 +56,7 @@ class Santa
 end
 #ends santa class
 
-santa = Santa.new("Jeff", "male", "Caucasian")
+santa = Santa.new("Jeff", "male", "Caucasian", 29)
 santa.speak
 santa.eat_milk_and_cookies("snickerdoodle")
 santa.name = "Jeffrey"
@@ -88,11 +88,12 @@ names = ["Kris", "Adrian", "Michel", "Pat", "Max", "Taylor", "Jamie", "Jordan"]
 #array of names
 genders = ["agender", "bigender", "female", "gender fluid", "intersex", "male", "other", "transgender"]
 #array of genders
-ethnicities = ["Arabs", "African-American", "Irish", "Jews", "Native American", "Spaniards", "Swedes", "Thais", ""]
+ethnicities = ["Arabs", "African-American", "Irish", "Jews", "Native American", "Spaniards", "Swedes", "Thais", "Other"]
 #array of ethnicities
-genders.length.times do |i|
+400.times do |i|
   #loop for number of items in gender array
-  santas << Santa.new(names[i], genders[i], ethnicities[i])
+  santas << Santa.new(names.sample, genders.sample, ethnicities.sample, age=rand(140))
   #add new santas to the array with variables from two arrays
 end
 #ends do loop
+
