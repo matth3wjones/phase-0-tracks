@@ -127,3 +127,18 @@ santa.get_mad_at=("Vixen")
 #setter test
 puts "Santa's Reindeer Ranking #{santa.get_mad_at}"
 #getter test
+
+santas = []
+#empty array
+names = ["Kris", "Adrian", "Michel", "Pat", "Max", "Taylor", "Jamie", "Jordan"]
+#array of names
+genders = ["agender", "bigender", "female", "gender fluid", "intersex", "male", "other", "transgender"]
+#array of genders
+ethnicities = ["Arabs", "African-American", "Irish", "Jews", "Native American", "Spaniards", "Swedes", "Thais", ""]
+#array of ethnicities
+genders.length.times do |i|
+  #loop for number of items in gender array
+  santas << Santa.new(names[i], genders[i], ethnicities[i])
+  #add new santas to the array with variables from two arrays
+end
+#ends do loop
