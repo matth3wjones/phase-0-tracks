@@ -25,32 +25,58 @@ class Santa
   #ends initialize method
 
   def name
-    #getter method
+    #name getter method
     @name
     #code
   end
-  #ends getter method
+  #ends name getter method
 
   def name=(new_name)
-    #setter method
+    #name setter method
     @name = new_name
     #code
   end
-  #ends setter method
+  #ends name setter method
 
-  def gender
-    #getter method
-    @gender
+  def celebrate_birthday
+    #celebrate_birthday getter method
+    #TEST ME
+    @age += 1
     #code
   end
-  #ends getter method
+  #ends celebrate_birthday getter method
 
-  def ethnicity
-    #getter method
+  def get_mad_at(reindeer_name)
+    #get_mad_at getter method
+    #TEST ME
     @name
     #code
   end
-  #ends getter method
+  #ends get_mad_at getter method
+
+  def gender
+    #gender getter method
+    #TEST ME
+    @gender
+    #code
+  end
+  #ends gender getter method
+
+  def gender=(new_gender)
+    #gender setter method
+    #TEST ME
+    @gender = new_gender
+    #code
+  end
+  #ends gender setter method
+
+  def age
+    #age getter method
+    @age
+    #
+  end
+  #ends age getter method
+
 
   def speak
     #speak method
@@ -86,3 +112,5 @@ genders.length.times do |i|
   #add new santas to the array with variables from two arrays
 end
 #ends do loop
+
+
