@@ -24,6 +24,34 @@ class Santa
   end
   #ends initialize method
 
+  def name
+    #getter method
+    @name
+    #code
+  end
+  #ends getter method
+
+  def name=(new_name)
+    #setter method
+    @name = new_name
+    #code
+  end
+  #ends setter method
+
+  def gender
+    #getter method
+    @gender
+    #code
+  end
+  #ends getter method
+
+  def ethnicity
+    #getter method
+    @name
+    #code
+  end
+  #ends getter method
+
   def speak
     #speak method
     puts "Ho, ho, ho! Haaaappy holidays!"
