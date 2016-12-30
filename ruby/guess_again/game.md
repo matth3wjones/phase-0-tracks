@@ -27,3 +27,13 @@
 # => using array of answer and empty array, display current game before each turn
 #
 #
+###############################################
+# Pseudocode draft 2
+
+driver code handles user input
+
+method to separate word into array of letters
+method to accept guess letter, scan array to see if present
+method to hide the real array
+method to display correct guesses in array
+method to loop, taunt, and congratulate

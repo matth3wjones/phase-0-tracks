@@ -2,40 +2,37 @@
 
 # first draft of pseudocode is in markdown file in directory
 #
-#
-
-# request a string from user
-#
-#
-
-# request user names and the rules
-#
-#
-
+# request user names
+# request a word from user
 # compare letter and add
-#
-#
-
 # if complete win, else taunt
-#
-#
+
 
 class Guessagain
-  def request_word(the_word)
-    puts "what is the word?"
-    temp_word = gets.chomp
-    the_word == temp_word
-    the_word
+  attr_reader :is_right, :guess_count
+  attr_accessor :letter_guess, :secret_word
+
+  def initialize
+    @secret_word = ""
+    @guess_count = 0
+    @is_right = false
   end
 
-  def request_name
+  def seperate_word(the_word)
+    the_word.split("")
+  end
+
+  def check_a_letter(letter, array)
+    array.include?(letter)
+  end
+
+  def hide_array(array)
 
   end
 
-  def compare
-
-  end
-
+  # if complete win, else taunt
+  #
+  #
   def win_or_taunt
 
   end
@@ -50,11 +47,10 @@ end
 puts "."
 puts ".."
 puts "..."
-puts "Welcome to Guess Again, a game like Hangman where no one gets hurt."
+puts "Welcome to Guess Again... it's just like Hangman but no one gets hurt."
 puts "A player picks a secret word for another player to guess, one letter at a time."
 puts "Limit of 1 guess per letter in the secret word, so guess carefully"
 game = Guessagain.new
+guess_count = 0
 #intro of game
 
-puts "What is the word?"
-secret_word = gets.chomp

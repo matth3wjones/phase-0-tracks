@@ -1,20 +1,26 @@
 require_relative 'guess_again'
 
 describe Guessagain do
-  let(:game) { Guessagain.new }
+  let(:game) { Guessagain.new}
 
-  it "request word from a user" do
-    expect(game.request_word("dog")).to eq "dog"
+  it "separates word into array" do
+    expect(game.seperate_word("dog")).to eq ["d", "o", "g"]
   end
-  #ends string receipt do loop
+  #ends method to separate word into array of letters
 
-  it "request names, rules" do
+  it "checks if guess is present" do
+    expect(game.check_a_letter("d", ["d", "o", "g"])).to eq true
   end
-  #end user name do loop
+  #end method to accept guess letter, scan array to see if present
 
-  it "compares letter and adds to array" do
+  it "hide the real array" do
+    expect(game.hide_array(["d", "o", "g"])).to eq "_ _ _"
   end
-  #ends compare letter do loop
+  #ends hide the real array
+
+  it "displays correct guesses in array" do
+  end
+  #ends method to display correct guesses in array
 
   it "if complete win, else taunt" do
   end
