@@ -3,12 +3,8 @@ require_relative 'guess_again'
 describe Guessagain do
   let(:game) { Guessagain.new}
 
-  it "accepts secret word" do
-    expect(game.acceptr("dog")).to eq "dog"
-  end
-
   it "splits word into array" do
-    expect(game.split_to_array("dog")).to eq ["d", "o", "g"]
+    expect(game.splitr("dog")).to eq ["d", "o", "g"]
   end
   #ends method to separate word into array of letters
 
@@ -23,7 +19,7 @@ describe Guessagain do
   #ends hide the real array
 
   it "displays correct guesses in array" do
-    expect(game.replacer("d", ["d", "o", "g"])).to eq ["d", "_", "_"]
+    expect(game.replacer("d")).to eq ["d", "_", "_"]
   end
   #ends method to display correct guesses in array
 
