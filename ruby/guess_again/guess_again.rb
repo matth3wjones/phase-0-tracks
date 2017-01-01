@@ -15,12 +15,22 @@ class Guessagain
   def initialize
     @master_array = []
     @display_array = []
+    @guess_array = []
     @is_over = false
     @guess_count = 0
   end
 
   def splitr(word)
     @master_array = word.split("")
+  end
+
+  def prev_guesses(guess)
+    if @guess_array.include?(guess)
+      return true
+    else
+      @guess_array << guess
+      return false
+    end
   end
 
   def checkr(guess, array)
@@ -94,8 +104,12 @@ while !game.is_over
   if turn < total_guesses
     puts "#{usr2}, please enter your guess"
     guess = gets.chomp
-    game.replacer(guess)
-    turn += 1
+    if game.prev_guesses(guess)
+      puts "Try again, you've used that letter"
+    else
+      game.replacer(guess)
+      turn += 1
+    end
   else
     puts "You lose, #{usr2}!"
     game.is_over = true
