@@ -25,7 +25,8 @@ describe Guessagain do
   #ends hide the real array
 
   it "displays correct guesses in array" do
-    expect(game.replacer("d")).to eq ["d", "_", "_"]
+    game.hider(game.splitr(word)).join(' ')
+    expect(game.replacer("d")).to eq "d _ _"
   end
   #ends method to display correct guesses in array
 
