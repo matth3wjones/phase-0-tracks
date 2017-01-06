@@ -1,10 +1,12 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [with: Ryan Langrin].
+# We spent [2] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#Require relative is a piece of code placed atop a document which identifies another document within your directory.  The document identified in this tag is basically copied and pasted into your document, any code present on that document is now accessible and driver code running first.
+#Require relative is a piece of code placed atop a document which identifies another document within your directory.  
+#The document identified in this tag is basically copied and pasted into your document, any code present on that document 
+#is now accessible and driver code running first.
 #
 require_relative 'state_data'
 
@@ -85,3 +87,24 @@ end
 
 #=======================================================================
 # Reflection Section
+
+#The main level of the hash uses strings as the key to identify each state, whereas the sub-hash uses symbols as keys. 
+#   Stylistcally this difference makes the code clean and readable, using a string makes the state itself a printable object
+#   while the symbol allows for easy access elsewhere, such as in the initialize method.
+#
+#
+#require_relative identifies another file on your system or within your local network
+#   require identifies an inherent piece of ruby internal code
+#   Each require method acts as copy-paste, inserting code
+#
+#
+#One could iterate through a hash by using #each to work through the hash on object at a time, or you can use #each_key 
+#   to access only the key or #each_value to access only the values
+#   
+#Each variable is called upon without any parameters, and are called in sequential order. 
+#   This method could be more productive, printing a single statement rather than two half statements
+#
+#This challenge really helped me to solidified my understanding of the require method, as well as constants, and instance
+#variables, and how to use each to their most appropriate, and productive manner.  This concept was difficult for me previously.
+#
+
