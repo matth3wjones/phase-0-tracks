@@ -79,8 +79,6 @@ STATE_DATA.each do |state, hash|
   n.virus_effects
 end
 
-#test
-
 
 
 #=======================================================================
