@@ -1,29 +1,30 @@
-var horses = ["Matt", "Derrick", "Gunner", "Sarge"];
-var colors = ["blue", "yellow", "green", "pink"];
+var names = ["Matt", "Derrick", "Gunner", "Sarge"]
+var colors = ["blue", "yellow", "green", "pink"]
 
-horses.push("Max");
+names.push("Max");
 colors.push("white");
-console.log(horses);
+//console.log(names);
 
-var horseAndColor = {}
+var horses = {}
 
-for (var i = 0; i < horses.length; i++) {
-  (horseAndColor[horses[i]]=colors[i]);
+for (var i = 0; i < names.length; i++) {
+  horses[names[i]] = colors[i];
 }
 
-console.log(horseAndColor)
+//console.log(horses)
 
 
-function Car(make, model, condition) {
- this.make = make;
- this.model = model;
- this.condition = condition;
- this.drive = function() { console.log("*drives*"); };
- if (this.condition == "used") {
-  console.log("old")
- }
-}
+function Car(make, model, status) {
+  this.make = make;
+  this.model = model;
+  this.status = status;
+  this.drive = function() { console.log("drives"); };
+  console.log("FOR SALE", make, model);
+};
 
-mattsCar = new Car("Volkswagen", "e-Golf", "new");
+var mattsCar = new Car("Volkswagen", "e-Golf", "sell");
+var derricksCar = new Car("Volkswagen", "Touareg", "keep");
 
-console.log(mattsCar)
+// console.log(mattsCar);
+mattsCar.drive();
+console.log(derricksCar.status);
