@@ -23,8 +23,12 @@ function reverse(word) {
 
 console.log(reverse("hello"));
 
-
-
+if ( 7 - 3 == 4) {
+  console.log(reverse("hello"))
+;}
+else {
+  console.log("hello")
+}
 
 
 
