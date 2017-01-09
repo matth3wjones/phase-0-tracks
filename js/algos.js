@@ -30,8 +30,12 @@ function longest(array) {
 
 function match(obj1, obj2) {
   return Object.keys(obj1).reduce(function(key,value) {
-    if (obj1[value] === obj2[value]) key[value] = obj2[value];
-    return key;
+    if (obj1[value] === obj2[value]) {
+      return true;
+    }
+    else {
+      return false;
+    }
     //returns matching keys
   }, {});
 };
@@ -80,9 +84,9 @@ function randomString(int) {
 //
 //
 // console.log(longest(phrases));
-// console.log(match(him, her));
-//NEED fail test
-// console.log(randomNum());
-// console.log(randomChar());
-var test = randomString(randomNum())
-console.log(longest(test))
+console.log(match(him, her));
+console.log(match(him, them))
+console.log(randomNum());
+console.log(randomChar());
+var word = randomString(randomNum())
+console.log(longest(word))
