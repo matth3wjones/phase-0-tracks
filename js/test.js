@@ -9,4 +9,4 @@ var str = "Loop over me!";
 // all in one tight line of code!
 for (var i = 10; i > 0; i--) {
   console.log(i);
-}
+
