@@ -1,0 +1,17 @@
+1
+SELECT artists.name, artists.style, stages.name FROM artists JOIN stages ON artists.stage_id = stages.id;
+
+Beyoncé|Hip Hop|Coachella Stage
+The XX|Alternative|Coachella Stage
+Röyksopp|Dance|Sahara Tent
+Hans Zimmer|Soundtrack|Yuma
+Kiiara|Electropop|Mojave Tent
+Jagwar Ma|Alternative|Gobi Tent
+Empire of the Sun|Alternative|Outdoor Theatre
+Kendrick Lamar|Hip Hop|Coachella Stage
+Justice|Dance|Sahara Tent
+Tove Lo|Dance|Sahara Tent
+Future Islands|Alternative|Outdoor Theatre
+
+_______
+2
