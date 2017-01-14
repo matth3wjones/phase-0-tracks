@@ -1,4 +1,5 @@
 JOIN 3 TABLES
+
 SELECT users.id, businesses.id, reviews.stars, reviews.comment
    ...> FROM users, businesses, reviews
    ...> WHERE reviews.id = 1;
