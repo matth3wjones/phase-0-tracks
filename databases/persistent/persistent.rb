@@ -1,7 +1,10 @@
 require 'sqlite3'
 
-class Test
+class List
+  attr_accessor :db
+
   db = SQLite3::Database.new("list.db")
+
   create_table_cmd = <<-SQL
   CREATE TABLE IF NOT EXISTS list(
     id INTEGER PRIMARY KEY,
@@ -10,6 +13,8 @@ class Test
     )
   SQL
 
+  db.execute(create_table_cmd)
+
 end
 
-Test.new
+List.new
