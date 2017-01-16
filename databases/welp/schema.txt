@@ -1,0 +1,6 @@
+USERS			REVIEWS				BUSINESSES
+id			id				id
+first_name		star				name
+last_name		comment				
+			foreign user key
+			foreign business key
