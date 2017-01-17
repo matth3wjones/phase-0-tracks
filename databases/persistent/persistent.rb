@@ -1,20 +1,35 @@
 require 'sqlite3'
+require 'faker'
 
-class List
-  attr_accessor :db
+class Itinerary
 
-  db = SQLite3::Database.new("list.db")
+  def initialize
+    @db = SQLite3::Database.new("list.db")
+    @db.results_as_hash = true
 
-  create_table_cmd = <<-SQL
-  CREATE TABLE IF NOT EXISTS list(
-    id INTEGER PRIMARY KEY,
-    name VARCHAR(255),
-    age INT
-    )
-  SQL
+    create_table = <<-SQL
+      CREATE TABLE IF NOT EXISTS list(
+        id INTEGER PRIMARY KEY,
+        dest VARCHAR(255),
+        date VARCHAR(255),
+        days INT
+      )
+    SQL
+    @db.execute(create_table)
+  end
 
-  db.execute(create_table_cmd)
+  def create(db, dest, date, days)
+    puts "_" * 70
+    puts "\n\n"
+    puts "WELCOME"
+  end
+
+  def to_s
+    "Hi"
+  end
 
 end
 
-List.new
+itin = Itinerary.new
+# puts itin
+itin.create(itin, "Santorini", "8/22/2017", 2)
