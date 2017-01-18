@@ -1,0 +1,23 @@
+var a = "hello";
+a
+document
+
+
+var els = document.getElementsByTagName("p")
+els
+
+
+var el = els[0]
+el.style.border = "7px solid green"
+
+
+var photo = document.getElementById("photo")
+photo.style.border = "3px solid yellow"
+
+
+function blueBorder() {
+  var photo = document.getElementById("photo");
+  photo.style.border = "3px solid blue"
+}
+
+photo.addEventListener("click", blueBorder)
