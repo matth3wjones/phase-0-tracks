@@ -15,3 +15,6 @@ What is the difference between a GET request and a POST request? When might each
 
 
 Optional bonus question: What is a cookie (the technical kind, not the delicious kind)? How does it relate to HTTP requests?
+
+  Cookies are little bits of information stored in a user's browser.  Cookies store a wide variety of data types, allowing a website to track users.  Newspapers such as the Washington Post use cookies to track users, noting how many pages have been loaded without logging into an account; once a user has loaded over 10 pages, they are restricted from using the site without logging into an active account.  Alternatively a user could load the same page using a browser with cookies disabled often identified as "private" browsers.  Cookies also help a browser store previously entered information, identify previously visited pages, and authenticate users, securing a connection to send sensitive information.
+
