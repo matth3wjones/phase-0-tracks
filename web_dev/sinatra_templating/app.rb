@@ -30,3 +30,11 @@ post '/students' do
 end
 
 # add static resources
+
+get '/city/new' do
+  erb :new_city
+end
+
+post '/city' do
+  db.execute("INSERT INTO students (name, campus) VALUES (?,?)", [params['name'], params['campus']])
+end
