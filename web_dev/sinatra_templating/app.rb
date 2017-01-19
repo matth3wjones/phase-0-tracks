@@ -17,6 +17,11 @@ get '/students/new' do
   erb :new_student
 end
 
+get '/city' do
+  @students = db.execute("SELECT * FROM students")
+  erb :city
+end
+
 # create new students via
 # a form
 post '/students' do
@@ -25,3 +30,11 @@ post '/students' do
 end
 
 # add static resources
+
+get '/city/new' do
+  erb :new_city
+end
+
+post '/city' do
+  db.execute("INSERT INTO students (name, campus) VALUES (?,?)", [params['name'], params['campus']])
+end
