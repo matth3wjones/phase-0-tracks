@@ -9,7 +9,13 @@ db.results_as_hash = true
 # add a query parameter
 # GET /
 get '/' do
+  name = params[:name]
+  age = params[:age]
+  if name && age
   "#{params[:name]} is #{params[:age]} years old."
+  else
+    "Hi stranger"
+  end
 end
 
 # write a GET route with
@@ -58,8 +64,14 @@ end
 get '/great_job' do
   name = params[:name]
   if name
-    "Hello, #{name}"
+    "Good job, #{name}!"
   else
-    "Hello"
+    "Good job!"
   end
+end
+
+get '/math/:num1/:num2' do
+  x = params["num1"]
+  y = params["num2"]
+  "#{params[:num1].to_i + params[:num2].to_i}"
 end
