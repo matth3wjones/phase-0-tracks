@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>San Diego</title>
+    <title>Campus Directory</title>
   </head>
   <body>
-    <h1>Welcome to San Diego</h1>
-    <p>America's Fincest City welcomes you.</p>
-
+    <h1>Welcome to our Campus Directory</h1>
+    <p>DBC students attend in the following cities:</p>
+  <ul>
+    <% @students.each do |student| %>
+      <li><%= student['name'] %>, <%= student['campus'] %></li>
+    <% end %>
+  </ul>
   </body>
 </html>
