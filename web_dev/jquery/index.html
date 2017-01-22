@@ -3,23 +3,42 @@
   <head>
     <title>30 Rock | Quotes</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   </head>
   <body>
+    <div id="content">
     <h1>30 Rock Quotes</h1>
     <h2>from Liz Lemon</h2>
     <p>I was going to take this class called Cooking for One, but the teacher killed himself.</p>
     <p>Get this, my gynecologist killed himself.</p>
     <p>You wanna party? It's $500 for kissing and $10,000 for snuggling; end of list.</p>
     <p>You are my heroine! And by heroine I mean lady hero. I don't want to inject you and listen to jazz.</p>
+
     <h2>from Tracy Jordan</h2>
     <p>Siri, kill Jenna!</p>
     <p>Siri, bring Jessica Tandy back to life.</p>
     <p>Live every week like it's Shark Week.</p>
-    <img src="./images/tracy-pigeon.jpg">
+    <img id ="pic" src="./images/tracy-pigeon.jpg">
     <p>Stop eating' people's old French Fries, Pigeon.  Have some self respect.  Don't you know you can fly?!</p>
+
     <h2>from Jack Donaghy</h2>
     <p>Never go with a hippie to a second location.</p>
     <p>Good God, Lemon!</p>
     <p>Money can't buy happiness.  It is happiness.</p>
+
+    <script type="text/javascript">
+
+    $("document").ready(function() {
+
+      $("#content").css("width", 500);
+      $("#content").css("margin", "auto");
+      $("pic").css("float", "left");
+      $("h2").css("color", "green");
+
+    }); <!-- End of jQuery Code -->
+    </script>
+
+    </div>
   </body>
 </html>
